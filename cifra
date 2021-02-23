@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Primeira {
+    public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+        ArrayList<String> letrasAlf = new ArrayList<String>();
+        ArrayList<String> palavrasC = new ArrayList<String>();
+        preenchendoListaAlf(letrasAlf);
+
+        System.out.println("Digite a palavra a ser criptografada:");
+        String palavra = sc.nextLine().toLowerCase();
+		System.out.println("Digite a quantidade de casas que você deseja deslocar:");
+		int casasD = sc.nextInt();
+
+        if (casasD > 25) {
+			int quantC = casasD / 26;
+			for (int i = 0; i<quantC; i++) {
+
+				for (int m = 0; m < 26; m++) {
+					letrasAlf.add(letrasAlfetras.get(m));
+				}
+			}
+		}
+
+		for (int c = 0; c<palavra.length(); c++) {
+			String crip = palavra.substring(c, c + 1);
+			int indice = letrasAlf.indexOf(crip);
+			palavrasC.add(letrasAlf.get(indice + casasD));
+		}
+		for (int e = 0; e<palavrasC.size(); e++) {
+			System.out.print(palavrasC.get(e));
+		}
+
+	}
+ 
+}
+
+    }
+}
